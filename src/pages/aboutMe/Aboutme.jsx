@@ -3,9 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import react from "../../assets/images/React.png";
 import vue from "../../assets/images/vue.png";
 import python from "../../assets/images/python.png";
+import { useTranslation } from "react-i18next";
 
 export function Aboutme() {
 
+  const { t } = useTranslation();
 
   const frameworks = [
     {
@@ -37,16 +39,10 @@ export function Aboutme() {
   return (
     <div className="w-full flex flex-col">
       <div className="w-3/4 text-5xl font-bold text-[#272727] mt-6">
-        Tecnologias en las que tengo conocimiento
+        {t('titleTecnologies')}
       </div>
       <div className="mt-16 w-4/6">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium,
-        provident. Omnis maiores vitae modi ea aperiam praesentium itaque culpa,
-        consequatur fuga at porro dicta blanditiis, molestias quam id assumenda
-        eaque, Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium,
-        provident. Omnis maiores vitae modi ea aperiam praesentium itaque culpa,
-        consequatur fuga at porro dicta blanditiis, molestias quam id assumenda
-        eaque.
+        {t('descriptionTecnologies')}
       </div>
       <div className="w-full flex mt-10 grid grid-cols-3">
         {frameworks &&

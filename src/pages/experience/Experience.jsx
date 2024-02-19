@@ -8,10 +8,7 @@ export function Experience() {
           </div>
           <div className="mt-16 flex justify-center">
             <p className="w-4/6 text-center">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates fuga odit veniam nulla cumque sit provident in eos,
-              sequi dolor dolorum molestias perspiciatis blanditiis placeat
-              molestiae quis voluptatum maiores exercitationem?
+            Como desarrollado de software cuento con experiencia y participación en diferentes proyectos y empresas, contribuyendo con el desarrollo y mantenimiento de software, mis habilidades incluyen desarrollar Frontend, Backend y Móvil, llevando una comunicación efectiva y ágil con el equipo.
             </p>
           </div>
         </div>

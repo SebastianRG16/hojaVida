@@ -15,13 +15,7 @@ export function Servicies() {
       <div className="w-full flex">
         <div className="mt-16 w-full justify-center flex text-center">
           <p className="w-4/6">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Laudantium, provident. Omnis maiores vitae modi ea aperiam
-            praesentium itaque culpa, consequatur fuga at porro dicta
-            blanditiis, molestias quam id assumenda eaque, Lorem ipsum dolor
-            sit, amet consectetur adipisicing elit. Laudantium, provident. Omnis
-            maiores vitae modi ea aperiam praesentium itaque culpa, consequatur
-            fuga at porro dicta blanditiis, molestias quam id assumenda eaque.
+            He tenido la oportunidad de liderar y contribuir en proyectos de alto valor, centrados en la entrega de soluciones de calidad e innovadoras, asi como la optimizacion de procesos empresariales. 
           </p>
         </div>
       </div>

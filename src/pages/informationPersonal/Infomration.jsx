@@ -25,15 +25,11 @@ export function Information() {
         </div>
         <div className="">
           <button className="p-2 text-white rounded bg-gradient-to-r from-[#123ad3] to-[#5967e9] transform transition-transform hover:scale-110">
-            Descargar CV
+            {t('textButtonInicio')}
           </button>
         </div>
         <div className="mt-16 w-4/6">
-          {" "}
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores
-          repellendus blanditiis, facilis voluptatem nam, necessitatibus quis
-          placeat possimus officiis labore veniam voluptate alias. Cum impedit
-          eius eos velit. Ipsam, nisi.
+          {t('descriptionInicio')}
         </div>
         <div className="mt-10 gap-5 flex">
           <FontAwesomeIcon
