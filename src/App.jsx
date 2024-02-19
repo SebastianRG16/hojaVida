@@ -9,7 +9,7 @@ import { Servicies } from "./pages/services/Seriveces";
 function App() {
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Home />}>
           **<Route index element={<Information />}></Route>
@@ -18,7 +18,7 @@ function App() {
           <Route path="/services" element={<Servicies />}></Route>
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
