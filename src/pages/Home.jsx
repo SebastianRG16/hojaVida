@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 import colombia from "../assets/images/colombia.jpeg";
 import brasil from "../assets/images/brasil.png";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export function Home() {
@@ -15,6 +15,23 @@ export function Home() {
 
   const [stateButton, setStateButton] = useState(false);
   const [menu, setMenu] = useState(false);
+  const [theme, setTheme] = useState(() => {
+    if (window.matchMedia("(prefers-color-shceme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  });
+  useEffect(() => {
+    if (theme === "dark") {
+      document.querySelector("html").classList.add("dark");
+    } else {
+      document.querySelector("html").classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleChangeTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
 
   function languajeStateButton() {
     setStateButton(!stateButton);
@@ -39,7 +56,7 @@ export function Home() {
                 onClick={languajeStateButton}
                 id="states-button"
                 data-dropdown-toggle="dropdown-states"
-                className="flex-shrink-0 gap-2 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-500 bg-gray-100 border border-gray-300 rounded-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100"
+                className="flex-shrink-0 gap-2 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-500 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-500 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:focus:ring-gray-700"
                 type="button"
               >
                 <img className="w-[20px] rounded" src={colombia} alt="" />
@@ -58,7 +75,7 @@ export function Home() {
                 id="dropdown-states"
                 className={` ${
                   stateButton === false ? "hidden" : ""
-                } z-10 absolute mt-14 bg-white divide-y divide-gray-100 rounded-lg shadow w-44`}
+                } z-10 absolute mt-14 dark:bg-gray-700 bg-white divide-y divide-gray-100 rounded-lg shadow w-44`}
               >
                 <ul
                   className="py-2 text-sm text-gray-700 "
@@ -72,9 +89,9 @@ export function Home() {
                         }
                       }}
                       type="button"
-                      className="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      className="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
                     >
-                      <div className="inline-flex gap-2 items-center">
+                      <div className="inline-flex gap-2 items-center dark:text-white">
                         <img
                           className="w-[20px] rounded"
                           src={colombia}
@@ -90,9 +107,9 @@ export function Home() {
                         changeLanguage("es"), languajeStateButton();
                       }}
                       type="button"
-                      className="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      className="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
                     >
-                      <div className="inline-flex items-center gap-2">
+                      <div className="inline-flex items-center gap-2 dark:text-white">
                         <img className="w-[20px] rounded" src={brasil} alt="" />
                         Português (BR)
                       </div>
@@ -106,9 +123,9 @@ export function Home() {
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <div className="relative">
               <div className="rounded">
-                <div>
+                <div onClick={handleChangeTheme} className="">
                   <FontAwesomeIcon
-                    className="cursor-pointer text-[#3650de] text-2xl lg:mr-10 rounded-full p-2 border border-gray-100 bg-gray-50"
+                    className="cursor-pointer text-[#3650de] text-2xl lg:mr-10 rounded-full p-2 border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800"
                     icon={faSun}
                   />
                 </div>
@@ -140,7 +157,7 @@ export function Home() {
             } items-center justify-between z-20 w-full md:flex md:w-auto md:order-1 max-md:shadow-lg`}
             id="navbar-sticky"
           >
-            <ul className="flex shadow-xl flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg md:rounded-full border-gray-100 bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border md:border-gray-100 md:p-2 md:bg-white md:pr-3 md:pl-3">
+            <ul className="flex shadow-xl dark:bg-gray-800 flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg md:rounded-full dark:border-gray-700 border-gray-100 bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border md:border-gray-100 md:p-2 md:bg-white md:pr-3 md:pl-3">
               <li>
                 <Link
                   to="/"
@@ -150,11 +167,11 @@ export function Home() {
                   className={` ${
                     location.pathname === "/"
                       ? "text-[#3650de]"
-                      : "text-gray-900"
+                      : "text-gray-900 dark:text-gray-200"
                   } block py-2 px-3 rounded md:bg-transparent md:text-[14px] md:hover:text-[#3650de] md:p-0`}
                   aria-current="page"
                 >
-                  Inicio
+                  {t("navbarInicio")}
                 </Link>
               </li>
               <li>
@@ -166,10 +183,10 @@ export function Home() {
                   className={` ${
                     location.pathname === "/aboutMe"
                       ? "text-[#3650de]"
-                      : "text-gray-900"
+                      : "text-gray-900 dark:text-gray-200"
                   }  block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:text-[14px] md:hover:text-[#3650de] md:p-0`}
                 >
-                  Tecnologias
+                  {t("navbarTecnologias")}
                 </Link>
               </li>
               <li>
@@ -181,10 +198,10 @@ export function Home() {
                   className={` ${
                     location.pathname === "/experience"
                       ? "text-[#3650de]"
-                      : "text-gray-900"
+                      : "text-gray-900 dark:text-gray-200"
                   } block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:text-[14px] md:hover:text-[#3650de] md:p-0`}
                 >
-                  Experiencia
+                  {t("navbarExperiencia")}
                 </Link>
               </li>
               <li>
@@ -196,10 +213,10 @@ export function Home() {
                   className={` ${
                     location.pathname === "/services"
                       ? "text-[#3650de]"
-                      : "text-gray-900"
+                      : "text-gray-900 dark:text-gray-200"
                   } block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:text-[14px] md:hover:text-[#3650de] md:p-0`}
                 >
-                  Proyectos
+                  {t("navbarProyectos")}
                 </Link>
               </li>
             </ul>

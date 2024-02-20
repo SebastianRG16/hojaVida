@@ -12,88 +12,81 @@ export function Servicies() {
     <div className="w-full">
       <div className="w-full flex">
         <div className="w-full justify-center text-center flex text-5xl font-bold text-[#272727] mt-6">
-          <p className="lg:w-3/4">{t("titleProjects")}</p>
+          <p className="lg:w-3/4 dark:text-gray-200">{t("titleProjects")}</p>
         </div>
       </div>
       <div className="w-full flex">
         <div className="mt-16 w-full justify-center flex text-center">
-          <p className="lg:w-4/6">{t("descriptionProjects")}</p>
+          <p className="lg:w-4/6 dark:text-white">{t("descriptionProjects")}</p>
         </div>
       </div>
       <div className="border-b-2 border-[#7d7df4] my-4 mt-20 mr-32 ml-32"></div>
       <section className="p-4 lg:p-8">
         <div className="container mx-auto space-y-12">
-          <div className="flex shadow-xl bg-gray-100 flex-col overflow-hidden rounded-md shadow-sm lg:flex-row transform transition-transform hover:scale-105 duration-500">
+          <div className="flex shadow-xl bg-gray-100 dark:bg-gray-800 flex-col overflow-hidden rounded-md shadow-sm lg:flex-row transform transition-transform hover:scale-105 duration-500">
             <img src={zaperoco} className="h-80  aspect-video" />
             <div className="flex flex-col justify-center flex-1 p-6 ">
               <span className="text-xs uppercase "></span>
-              <h3 className="text-3xl font-bold">Zaperoco Software</h3>
-              <p className="my-6 ">
-                La finalidad de zaperoco software es ayudar a una fundacion de
-                niños con cancer a recaudar donaciones en sus eventos.
-              </p>
+              <h3 className="text-3xl font-bold dark:text-white">
+                {t("titelZaperoco")}
+              </h3>
+              <p className="my-6 dark:text-white">{t("descriptionZaperoco")}</p>
               <button type="button" className="self-start">
-                Action
+                {t("visualizar")}
               </button>
             </div>
           </div>
-          <div className="flex shadow-xl bg-gray-100 flex-col overflow-hidden rounded-md shadow-sm lg:flex-row-reverse transform transition-transform hover:scale-105 duration-500">
+          <div className="flex shadow-xl bg-gray-100 dark:bg-gray-800 flex-col overflow-hidden rounded-md shadow-sm lg:flex-row-reverse transform transition-transform hover:scale-105 duration-500">
             <img src={mucenos} className="h-80  aspect-video" />
             <div className="flex flex-col justify-center flex-1 p-6 ">
               <span className="text-xs uppercase "></span>
-              <h3 className="text-3xl font-bold">Muceños Gastropub</h3>
-              <p className="my-6 ">
-                Software desarrollado para un restaurante con la finalidad de
-                que los clientes interactuen con el sistema y puedan dispensar
-                su serversa haciendo uso de esete sistema interactivo.
-              </p>
+              <h3 className="text-3xl font-bold dark:text-white">
+                {t("titelMucenos")}
+              </h3>
+              <p className="my-6 dark:text-white">{t("descriptionMucenos")}</p>
               <button type="button" className="self-start">
-                Action
+                {t("visualizar")}
               </button>
             </div>
           </div>
-          <div className="flex shadow-xl bg-gray-100 flex-col overflow-hidden rounded-md shadow-sm lg:flex-row transform transition-transform hover:scale-105 duration-500">
+          <div className="flex shadow-xl bg-gray-100 dark:bg-gray-800 flex-col overflow-hidden rounded-md shadow-sm lg:flex-row transform transition-transform hover:scale-105 duration-500">
             <img src={restaurant} className="h-80  aspect-video" />
             <div className="flex flex-col justify-center flex-1 p-6 ">
               <span className="text-xs uppercase "></span>
-              <h3 className="text-3xl font-bold">Smart Restaurant</h3>
-              <p className="my-6 ">
-                Es un software que busca automatizar proceso en la industria
-                restaurantera, asi como llevar toda su contabilidad, brindando
-                una nueva experiencia al cliente.
+              <h3 className="text-3xl font-bold dark:text-white">
+                {t("titelRestaurant")}
+              </h3>
+              <p className="my-6 dark:text-white">
+                {t("descriptionRestaurant")}
               </p>
               <button type="button" className="self-start">
-                Action
+                {t("visualizar")}
               </button>
             </div>
           </div>
-          <div className="flex shadow-xl bg-gray-100 flex-col overflow-hidden rounded-md shadow-sm lg:flex-row-reverse transform transition-transform hover:scale-105 duration-500">
+          <div className="flex shadow-xl bg-gray-100 dark:bg-gray-800 flex-col overflow-hidden rounded-md shadow-sm lg:flex-row-reverse transform transition-transform hover:scale-105 duration-500">
             <img src={meraki} className="h-80  aspect-video" />
             <div className="flex flex-col justify-center flex-1 p-6 ">
               <span className="text-xs uppercase "></span>
-              <h3 className="text-3xl font-bold">Meraki Software</h3>
-              <p className="my-6 ">
-                Meraki software es un emprendimiento donde se busca desarrollar
-                software a la medida y de la misma manera desarrollar un
-                software que los caracterice.
-              </p>
+              <h3 className="text-3xl font-bold dark:text-white">
+                {t("titelMeraki")}
+              </h3>
+              <p className="my-6 dark:text-white">{t("descriptionMeraki")}</p>
               <button type="button" className="self-start">
-                Action
+                {t("visualizar")}
               </button>
             </div>
           </div>
-          <div className="flex shadow-xl bg-gray-100 flex-col overflow-hidden rounded-md shadow-sm lg:flex-row transform transition-transform hover:scale-105 duration-500">
+          <div className="flex shadow-xl bg-gray-100 dark:bg-gray-800 flex-col overflow-hidden rounded-md shadow-sm lg:flex-row transform transition-transform hover:scale-105 duration-500">
             <img src={jac} className="h-80  aspect-video" />
             <div className="flex flex-col justify-center flex-1 p-6 ">
               <span className="text-xs uppercase "></span>
-              <h3 className="text-3xl font-bold">JAC Software</h3>
-              <p className="my-6 ">
-                JAC es un software creado para una junta de accion comunal, con
-                la finalidad de ayudar en el seguimiento de reuniones,
-                interactividad con la comunidad y administracion de archivos.
-              </p>
+              <h3 className="text-3xl font-bold dark:text-white">
+                {t("titelJAC")}
+              </h3>
+              <p className="my-6 dark:text-white">{t("descriptionJAC")}</p>
               <button type="button" className="self-start">
-                Action
+                {t("visualizar")}
               </button>
             </div>
           </div>
