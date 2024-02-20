@@ -9,12 +9,12 @@ export function Servicies() {
     <div className="w-full">
       <div className="w-full flex">
         <div className="w-full justify-center text-center flex text-5xl font-bold text-[#272727] mt-6">
-          <p className="w-3/4">Proyectos de mas valor que he desarrollado</p>
+          <p className="lg:w-3/4">Proyectos de mas valor que he desarrollado</p>
         </div>
       </div>
       <div className="w-full flex">
         <div className="mt-16 w-full justify-center flex text-center">
-          <p className="w-4/6">
+          <p className="lg:w-4/6">
             He tenido la oportunidad de liderar y contribuir en proyectos de alto valor, centrados en la entrega de soluciones de calidad e innovadoras, asi como la optimizacion de procesos empresariales. 
           </p>
         </div>

@@ -38,13 +38,13 @@ export function Aboutme() {
 
   return (
     <div className="w-full flex flex-col">
-      <div className="w-3/4 text-5xl font-bold text-[#272727] mt-6">
+      <div className="md:w-3/4 text-5xl font-bold text-[#272727] mt-6">
         {t('titleTecnologies')}
       </div>
-      <div className="mt-16 w-4/6">
+      <div className="mt-16 md:w-4/6">
         {t('descriptionTecnologies')}
       </div>
-      <div className="w-full flex mt-10 grid grid-cols-3">
+      <div className="w-full flex mt-10 grid max-md:grid-cols-2 md:grid-cols-3">
         {frameworks &&
           frameworks.map((framework, index) => (
             <div

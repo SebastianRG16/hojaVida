@@ -6,32 +6,29 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ImagenIA from "../../assets/images/imagenInicioHojaDeVida.png";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 export function Information() {
-
   const { t } = useTranslation();
 
   return (
     <div className="flex w-full h-full">
-      <div className="ml-20">
+      <div className="lg:ml-20">
         <div className="flex w-full">
-          <div className="w-2/4 text-5xl font-bold text-[#272727] mt-32">
-            {t('titleInicio')}
+          <div className="max-md:w-full w-2/4 max-lg:w-3/4 text-5xl font-bold text-[#272727] md:mt-32">
+            {t("titleInicio")}
           </div>
-          <div className="grid w-2/4 justify-items-end items-center mt-100 origin-top-left rotate-[8deg]">
+          <div className="grid max-lg:hidden w-2/4 justify-items-end items-center mt-100 origin-top-left rotate-[8deg]">
             <img className="h-[380px] rounded-lg mt-10" src={ImagenIA} />
           </div>
         </div>
-        <div className="">
+        <div className="max-lg:mt-10">
           <button className="p-2 text-white rounded bg-gradient-to-r from-[#123ad3] to-[#5967e9] transform transition-transform hover:scale-110">
-            {t('textButtonInicio')}
+            {t("textButtonInicio")}
           </button>
         </div>
-        <div className="mt-16 w-4/6">
-          {t('descriptionInicio')}
-        </div>
-        <div className="mt-10 gap-5 flex">
+        <div className="mt-16 lg:w-4/6">{t("descriptionInicio")}</div>
+        <div className="mt-10 gap-5 flex max-sm:mb-10">
           <FontAwesomeIcon
             className="text-xl cursor-pointer hover:text-[#3650de] transform transition-transform hover:scale-110"
             icon={faXTwitter}
