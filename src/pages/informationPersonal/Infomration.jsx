@@ -22,10 +22,10 @@ export function Information() {
             <img className="h-[380px] rounded-lg mt-10" src={ImagenIA} />
           </div>
         </div>
-        <div className="max-lg:mt-10">
-          <button className="p-2 text-white rounded bg-gradient-to-r from-[#123ad3] to-[#5967e9] transform transition-transform hover:scale-110">
+        <div className="max-lg:mt-10 cursor-pointer">
+          <a href="https://res.cloudinary.com/dqwryyydm/image/upload/f_auto,q_auto/hkboo8vbqimvg3fbounh" className="p-2 text-white rounded bg-gradient-to-r from-[#123ad3] to-[#5967e9] transform transition-transform hover:scale-110">
             {t("textButtonInicio")}
-          </button>
+          </a>
         </div>
         <div className="mt-16 lg:w-4/6 dark:text-white">{t("descriptionInicio")}</div>
         <div className="mt-10 gap-5 flex max-sm:mb-10">

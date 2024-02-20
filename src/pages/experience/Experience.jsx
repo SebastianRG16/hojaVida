@@ -38,7 +38,7 @@ export function Experience() {
                       InnovarWeb Technologies{" "}
                     </h3>
                     <time className="text-xs tracki uppercase text-gray-400">
-                      Dec 2020
+                      Sep/2023 - Enr/2024
                     </time>
                     <p className="mt-3 dark:text-white">
                       {t('descriptionInnovar')}
@@ -49,7 +49,7 @@ export function Experience() {
                       Prosoft SC
                     </h3>
                     <time className="text-xs tracki uppercase text-gray-400">
-                      Jul 2019
+                      Abr/2022 - Ago/202
                     </time>
                     <p className="mt-3 dark:text-white">
                       {t('descriptionProsoft')}
