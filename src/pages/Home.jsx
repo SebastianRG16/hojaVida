@@ -14,6 +14,7 @@ export function Home() {
   const { t, i18n } = useTranslation();
 
   const [stateButton, setStateButton] = useState(false);
+  const [menu, setMenu] = useState(false);
 
   function languajeStateButton() {
     setStateButton(!stateButton);
@@ -22,6 +23,10 @@ export function Home() {
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
   };
+
+  function openMenu() {
+    setMenu(!menu);
+  }
 
   return (
     <div className="relative">
@@ -97,41 +102,25 @@ export function Home() {
               </div>
             </div>
           </form>
-          {/* <div className="absolute">
-            <div className="rounded flex">
-              <p className="justify-center items-center text-center flex mr-2">
-                Lenguaje
-              </p>
-              <div className="flex flex-col mt-7">
-                <div className="cursor-pointer items-center flex gap-2 transform transition-transform hover:scale-110">
-                  <img className="w-[30px] rounded-md" src={brasil} alt="" />
-                  <FontAwesomeIcon className="" icon={faArrowDown} />
-                </div>
-                <div className="mt-2 cursor-pointer items-center flex gap-2 transform transition-transform hover:scale-110">
-                  <img className="w-[30px] rounded-md" src={colombia} alt="" />
-                  <p>ES</p>
-                </div>
-              </div>
-            </div>
-          </div> */}
           <span className="self-center text-2xl font-semibold whitespace-nowrap "></span>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <div className="relative">
               <div className="rounded">
                 <div>
                   <FontAwesomeIcon
-                    className="cursor-pointer text-[#3650de] text-2xl mr-10 rounded-full p-2 border border-gray-100 bg-gray-50"
+                    className="cursor-pointer text-[#3650de] text-2xl lg:mr-10 rounded-full p-2 border border-gray-100 bg-gray-50"
                     icon={faSun}
                   />
                 </div>
               </div>
             </div>
             <button
-              data-collapse-toggle="navbar-sticky"
+              data-collapse-toggle="navbar-default"
               type="button"
-              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
-              aria-controls="navbar-sticky"
+              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+              aria-controls="navbar-default"
               aria-expanded="false"
+              onClick={() => openMenu()}
             >
               <span className="sr-only">Open main menu</span>
               <svg
@@ -141,18 +130,23 @@ export function Home() {
                 fill="none"
                 viewBox="0 0 17 14"
               >
-                <path d="M1 1h15M1 7h15M1 13h15" />
+                <path stroke="currentColor" d="M1 1h15M1 7h15M1 13h15" />
               </svg>
             </button>
           </div>
           <div
-            className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            className={` ${
+              menu === false ? "hidden" : ""
+            } items-center justify-between z-20 w-full md:flex md:w-auto md:order-1 max-md:shadow-lg`}
             id="navbar-sticky"
           >
-            <ul className="flex shadow-xl flex-col p-4 md:p-0 mt-4 font-medium border rounded-full border-gray-100 bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border md:border-gray-100 md:p-2 md:bg-white md:pr-3 md:pl-3">
+            <ul className="flex shadow-xl flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg md:rounded-full border-gray-100 bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border md:border-gray-100 md:p-2 md:bg-white md:pr-3 md:pl-3">
               <li>
                 <Link
                   to="/"
+                  onClick={() => {
+                    menu === true ? openMenu() : "";
+                  }}
                   className={` ${
                     location.pathname === "/"
                       ? "text-[#3650de]"
@@ -166,6 +160,9 @@ export function Home() {
               <li>
                 <Link
                   to="/aboutMe"
+                  onClick={() => {
+                    menu === true ? openMenu() : "";
+                  }}
                   className={` ${
                     location.pathname === "/aboutMe"
                       ? "text-[#3650de]"
@@ -178,6 +175,9 @@ export function Home() {
               <li>
                 <Link
                   to="/experience"
+                  onClick={() => {
+                    menu === true ? openMenu() : "";
+                  }}
                   className={` ${
                     location.pathname === "/experience"
                       ? "text-[#3650de]"
@@ -190,6 +190,9 @@ export function Home() {
               <li>
                 <Link
                   to="/services"
+                  onClick={() => {
+                    menu === true ? openMenu() : "";
+                  }}
                   className={` ${
                     location.pathname === "/services"
                       ? "text-[#3650de]"
