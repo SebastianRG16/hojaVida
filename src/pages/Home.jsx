@@ -13,6 +13,8 @@ export function Home() {
 
   const { t, i18n } = useTranslation();
 
+  const currentLanguage = i18n.language;
+
   const [stateButton, setStateButton] = useState(false);
   const [menu, setMenu] = useState(false);
   const [theme, setTheme] = useState(() => {
@@ -59,8 +61,8 @@ export function Home() {
                 className="flex-shrink-0 gap-2 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-500 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-500 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:focus:ring-gray-700"
                 type="button"
               >
-                <img className="w-[20px] rounded" src={colombia} alt="" />
-                CO{" "}
+                <img className="w-[20px] rounded" src={currentLanguage === 'en' ? colombia : brasil} alt="" />
+                {currentLanguage === 'en' ? 'CO' : 'BR' }
                 <svg
                   className="w-2.5 h-2.5 ms-2.5"
                   aria-hidden="true"
