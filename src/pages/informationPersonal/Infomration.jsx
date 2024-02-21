@@ -11,6 +11,10 @@ import { useTranslation } from "react-i18next";
 export function Information() {
   const { t } = useTranslation();
 
+  function redirectToUrlInNewTab(url) {
+    window.open(url, "_blank");
+  }
+
   return (
     <div className="flex w-full h-full">
       <div className="lg:ml-20">
@@ -23,28 +27,66 @@ export function Information() {
           </div>
         </div>
         <div className="max-lg:mt-10 cursor-pointer">
-          <a href="https://res.cloudinary.com/dqwryyydm/image/upload/f_auto,q_auto/hkboo8vbqimvg3fbounh" className="p-2 text-white rounded bg-gradient-to-r from-[#123ad3] to-[#5967e9] transform transition-transform hover:scale-110">
+          <button
+            onClick={() =>
+              redirectToUrlInNewTab(
+                "https://res.cloudinary.com/dqwryyydm/image/upload/f_auto,q_auto/hkboo8vbqimvg3fbounh"
+              )
+            }
+            className="p-2 text-white rounded bg-gradient-to-r from-[#123ad3] to-[#5967e9] transform transition-transform hover:scale-110"
+          >
             {t("textButtonInicio")}
-          </a>
+          </button>
         </div>
-        <div className="mt-16 lg:w-4/6 dark:text-white">{t("descriptionInicio")}</div>
+        <div className="mt-16 lg:w-4/6 dark:text-white">
+          {t("descriptionInicio")}
+        </div>
         <div className="mt-10 gap-5 flex max-sm:mb-10">
-          <FontAwesomeIcon
-            className="text-xl cursor-pointer dark:text-white hover:text-[#3650de] dark:hover:text-[#3650de] transform transition-transform hover:scale-110"
-            icon={faXTwitter}
-          />
-          <FontAwesomeIcon
-            className="text-xl cursor-pointer dark:text-white hover:text-[#3650de] dark:hover:text-[#3650de] transform transition-transform hover:scale-110"
-            icon={faInstagram}
-          />
-          <FontAwesomeIcon
-            className="text-xl cursor-pointer dark:text-white hover:text-[#3650de] dark:hover:text-[#3650de] transform transition-transform hover:scale-110"
-            icon={faGithub}
-          />
-          <FontAwesomeIcon
-            className="text-xl cursor-pointer dark:text-white hover:text-[#3650de] dark:hover:text-[#3650de] transform transition-transform hover:scale-110"
-            icon={faLinkedinIn}
-          />
+          <div
+            className=""
+            onClick={() =>
+              redirectToUrlInNewTab("https://twitter.com/Sebasti44384647")
+            }
+          >
+            <FontAwesomeIcon
+              className="text-xl cursor-pointer dark:text-white hover:text-[#3650de] dark:hover:text-[#3650de] transform transition-transform hover:scale-110"
+              icon={faXTwitter}
+            />
+          </div>
+          <div
+            onClick={() =>
+              redirectToUrlInNewTab(
+                "https://www.instagram.com/sebastianrodriguezgarzon1607/"
+              )
+            }
+          >
+            <FontAwesomeIcon
+              className="text-xl cursor-pointer dark:text-white hover:text-[#3650de] dark:hover:text-[#3650de] transform transition-transform hover:scale-110"
+              icon={faInstagram}
+            />
+          </div>
+          <div
+            onClick={() =>
+              redirectToUrlInNewTab("https://github.com/SebastianRG16")
+            }
+          >
+            <FontAwesomeIcon
+              className="text-xl cursor-pointer dark:text-white hover:text-[#3650de] dark:hover:text-[#3650de] transform transition-transform hover:scale-110"
+              icon={faGithub}
+            />
+          </div>
+          <div
+            onClick={() =>
+              redirectToUrlInNewTab(
+                "https://www.linkedin.com/in/sebastian-rodriguez-018a99204/ "
+              )
+            }
+          >
+            <FontAwesomeIcon
+              className="text-xl cursor-pointer dark:text-white hover:text-[#3650de] dark:hover:text-[#3650de] transform transition-transform hover:scale-110"
+              icon={faLinkedinIn}
+            />
+          </div>
         </div>
       </div>
     </div>
