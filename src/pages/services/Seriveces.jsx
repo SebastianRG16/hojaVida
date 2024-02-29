@@ -8,6 +8,10 @@ import { useTranslation } from "react-i18next";
 export function Servicies() {
   const { t } = useTranslation();
 
+  function redirectToUrlInNewTab(url) {
+    window.open(url, "_blank");
+  }
+
   return (
     <div className="w-full">
       <div className="w-full flex">
@@ -31,7 +35,13 @@ export function Servicies() {
                 {t("titelZaperoco")}
               </h3>
               <p className="my-6 dark:text-white">{t("descriptionZaperoco")}</p>
-              <button type="button" className="self-start">
+              <button
+                type="button"
+                className="self-start dark:text-white"
+                onClick={() => {
+                  redirectToUrlInNewTab("https://zaperoco-8617.onrender.com");
+                }}
+              >
                 {t("visualizar")}
               </button>
             </div>
@@ -44,7 +54,13 @@ export function Servicies() {
                 {t("titelMucenos")}
               </h3>
               <p className="my-6 dark:text-white">{t("descriptionMucenos")}</p>
-              <button type="button" className="self-start">
+              <button
+                type="button"
+                className="self-start dark:text-white"
+                onClick={() => {
+                  redirectToUrlInNewTab("https://mucenos.onrender.com");
+                }}
+              >
                 {t("visualizar")}
               </button>
             </div>
@@ -59,7 +75,13 @@ export function Servicies() {
               <p className="my-6 dark:text-white">
                 {t("descriptionRestaurant")}
               </p>
-              <button type="button" className="self-start">
+              <button
+                type="button"
+                className="self-start dark:text-white"
+                onClick={() => {
+                  redirectToUrlInNewTab("https://restaurantsmart.onrender.com");
+                }}
+              >
                 {t("visualizar")}
               </button>
             </div>
@@ -72,7 +94,13 @@ export function Servicies() {
                 {t("titelMeraki")}
               </h3>
               <p className="my-6 dark:text-white">{t("descriptionMeraki")}</p>
-              <button type="button" className="self-start">
+              <button
+                type="button"
+                className="self-start dark:text-white"
+                onClick={() => {
+                  redirectToUrlInNewTab("https://merakisoftware.onrender.com");
+                }}
+              >
                 {t("visualizar")}
               </button>
             </div>
@@ -85,7 +113,13 @@ export function Servicies() {
                 {t("titelJAC")}
               </h3>
               <p className="my-6 dark:text-white">{t("descriptionJAC")}</p>
-              <button type="button" className="self-start">
+              <button
+                type="button"
+                className="self-start dark:text-white"
+                onClick={() => {
+                  redirectToUrlInNewTab("https://pgjac.onrender.com");
+                }}
+              >
                 {t("visualizar")}
               </button>
             </div>
