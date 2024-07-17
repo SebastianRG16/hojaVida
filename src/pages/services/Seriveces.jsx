@@ -105,7 +105,7 @@ export function Servicies() {
               </button>
             </div>
           </div>
-          <div className="flex shadow-xl bg-gray-100 dark:bg-gray-800 flex-col overflow-hidden rounded-md shadow-sm lg:flex-row transform transition-transform hover:scale-105 duration-500">
+          {/* <div className="flex shadow-xl bg-gray-100 dark:bg-gray-800 flex-col overflow-hidden rounded-md shadow-sm lg:flex-row transform transition-transform hover:scale-105 duration-500">
             <img src={jac} className="h-80  aspect-video" />
             <div className="flex flex-col justify-center flex-1 p-6 ">
               <span className="text-xs uppercase "></span>
@@ -123,7 +123,7 @@ export function Servicies() {
                 {t("visualizar")}
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>
