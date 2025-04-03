@@ -43,6 +43,10 @@ i18n.use(initReactI18next).init({
         trabajos: "Trabajos",
         descriptionInnovar:
           "Desarrollador Frontend, enfocado principalmente en el desarrollo de aplicaciones móviles con React, y por consecuente el desarrollo de aplicaciones web con dicha tecnología.",
+        descriptionSolucionSoft:
+          "Desarrollador Móvil y Frontend, contratado por proyecto para el desarrollo de una aplicación móvil para Android y IOS, estando ha cargado de la estructura y desarrollo de la misma, así como la publicación de esta en las diferentes tiendas.",
+        descriptionArgentina:
+          "Desarrollador Móvil, desarrollo de aplicaciones móviles en React Native implementado una arquitectura limpia y escalable, trabajando con mocks y pruebas unitarias para garantizar la calidad del software.",
         descriptionProsoft:
           "Desarrollador Full Stack, encargado de dar mantenimiento y soluciones tecnológicas mediante el desarrollo de software a los clientes de la empresa.",
         descriptionReact:
@@ -95,6 +99,10 @@ i18n.use(initReactI18next).init({
         trabajos: "Trabalhos",
         descriptionInnovar:
           "Desenvolvedor Frontend Focado principalmente no desenvolvimento de aplicativos móveis com React e, consequentemente, no desenvolvimento de aplicativos da Web com essa tecnologia.",
+        descriptionSolucionSoft:
+          "Desenvolvedor Móvel e Frontend, contratado por projeto para o desenvolvimento de um aplicativo móvel para Android e IOS, estando carregado com a estrutura e o desenvolvimento do mesmo, bem como a publicação deste nas diferentes lojas.",
+        descriptionArgentina:
+          "Desenvolvedor móvel, desenvolvedor de aplicativos móveis em React Native, implementando uma arquitetura limpa e escalável, trabalhando com mocks e testes unitários para garantir a qualidade do software.",
         descriptionProsoft:
           "Desenvolvedor completo Pilha Responsável por fornecer soluções tecnológicas e de manutenção por meio do desenvolvimento de software para os clientes da empresa.",
         descriptionReact:

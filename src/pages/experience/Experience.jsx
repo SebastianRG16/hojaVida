@@ -35,11 +35,33 @@ export function Experience() {
                 <div className="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:bg-gray-700">
                   <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-[#123ad3]">
                     <h3 className="text-xl font-semibold tracki dark:text-gray-200">
+                      Tu negocio Web{" "}
+                    </h3>
+                    {/* <time className="text-xs tracki uppercase text-gray-400">
+                      Sep/2023 - Enr/2024
+                    </time> */}
+                    <p className="mt-3 dark:text-white">
+                      {t('descriptionInnovar')}
+                    </p>
+                  </div>
+                  <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-[#123ad3]">
+                    <h3 className="text-xl font-semibold tracki dark:text-gray-200">
+                      SolucionSoft{" "}
+                    </h3>
+                    {/* <time className="text-xs tracki uppercase text-gray-400">
+                      Sep/2023 - Enr/2024
+                    </time> */}
+                    <p className="mt-3 dark:text-white">
+                      {t('descriptionInnovar')}
+                    </p>
+                  </div>
+                  <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-[#123ad3]">
+                    <h3 className="text-xl font-semibold tracki dark:text-gray-200">
                       InnovarWeb Technologies{" "}
                     </h3>
-                    <time className="text-xs tracki uppercase text-gray-400">
+                    {/* <time className="text-xs tracki uppercase text-gray-400">
                       Sep/2023 - Enr/2024
-                    </time>
+                    </time> */}
                     <p className="mt-3 dark:text-white">
                       {t('descriptionInnovar')}
                     </p>
@@ -48,9 +70,9 @@ export function Experience() {
                     <h3 className="text-xl font-semibold tracki dark:text-gray-200">
                       Prosoft SC
                     </h3>
-                    <time className="text-xs tracki uppercase text-gray-400">
+                    {/* <time className="text-xs tracki uppercase text-gray-400">
                       Abr/2022 - Ago/202
-                    </time>
+                    </time> */}
                     <p className="mt-3 dark:text-white">
                       {t('descriptionProsoft')}
                     </p>
