@@ -9,7 +9,7 @@ i18n.use(initReactI18next).init({
         titleInicio:
           "Desarrollador de software, emprendedor y aficionado a los autos.",
         descriptionInicio:
-          "Soy Sebastián Rodríguez Garzón, estudiante de Ingeniería en Sistemas, apasionado por la tecnología y los automóviles, me dedico cada día a dejar lo mejor de mí en los proyectos y códigos que desarrollo. Busco combinar mi entusiasmo por la innovación tecnológica con mi formación en ingeniería para crear soluciones creativas y efectivas, estoy comprometido con el aprendizaje continuo y siempre estoy en busca de nuevos desafíos que me permitan crecer tanto profesional como personalmente.",
+          "Soy Sebastián Rodríguez Garzón, Ingeniero en Sistemas, apasionado por la tecnología y los automóviles, me dedico cada día a dejar lo mejor de mí en los proyectos y códigos que desarrollo. Busco combinar mi entusiasmo por la innovación tecnológica con mi formación en ingeniería para crear soluciones creativas y efectivas, estoy comprometido con el aprendizaje continuo y siempre estoy en busca de nuevos desafíos que me permitan crecer tanto profesional como personalmente.",
         textButtonInicio: "Descargar CV",
         titleTecnologies: "Tecnologías en las que tengo conocimiento",
         descriptionTecnologies:
@@ -64,7 +64,7 @@ i18n.use(initReactI18next).init({
         titleInicio:
           "Desenvolvedor de software, empreendedor e entusiasta de automobilismo.",
         descriptionInicio:
-          "Eu sou Sebastián Rodríguez Garzón, estudante de Engenharia de Sistemas, apaixonado por tecnologia e carros, me dedico todos os dias a deixar o melhor de mim nos projetos e códigos que desenvolvo. Procuro combinar meu entusiasmo pela inovação tecnológica com minha formação em engenharia para criar soluções criativas e eficazes. Estou comprometido com o aprendizado contínuo e sempre busco novos desafios que me permitam crescer profissional e pessoalmente.",
+          "Eu sou Sebastián Rodríguez Garzón, Engenheiro de sistemas, apaixonado por tecnologia e carros, me dedico todos os dias a deixar o melhor de mim nos projetos e códigos que desenvolvo. Procuro combinar meu entusiasmo pela inovação tecnológica com minha formação em engenharia para criar soluções criativas e eficazes. Estou comprometido com o aprendizado contínuo e sempre busco novos desafios que me permitam crescer profissional e pessoalmente.",
         textButtonInicio: "Download do CV",
         titleTecnologies: "Tecnologias nas quais tenho conhecimento",
         descriptionTecnologies:
